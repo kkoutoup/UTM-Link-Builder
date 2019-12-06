@@ -8,7 +8,7 @@ Google Analytics/Ad campaigns/Social Media
 Help my team's members create UTM codes for ad campaigns across different platforms (Facebook, Twitter, Instagram, Social Shorthand etc.) in a robust way. The aim of the app is to produce the codes based on user input and perform  robust error checking to ensure outputs are correct. This is crucial for ad campaign performance monitoring as errors in the UTM code structure will make it impossible to track campaigns and compare performance.
 
 ### User needs
-The app needs to be simple, intuitive with minimal dependencies so it can be used by variety of people. Therefore it is a single HTML page built with Bootstrap and vanilla JS for error checking and code production.
+The app needs to be simple, intuitive with minimal dependencies so it can be used by of people of different, in some cases non-technical, backgrounds. Therefore it is a single HTML page built with Bootstrap and vanilla JS for error checking and code production.
 
 ### Dependencies
 Built with Python 3.6.4 and the following modules
