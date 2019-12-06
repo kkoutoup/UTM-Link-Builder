@@ -26,6 +26,9 @@
   font-style: italic;
 }
 
+/*MIXINS*/
+/*Media Queries*/
+/*bootstrap breakpoints*/
 .jumbotron {
   background: #373151;
   border-radius: 0;
@@ -36,6 +39,12 @@
   color: #fff;
   padding: 2rem 1rem;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 767px) {
+  .jumbotron h1 {
+    margin-left: -15px;
+  }
 }
 
 form label {

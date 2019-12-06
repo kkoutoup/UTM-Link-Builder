@@ -1,14 +1,15 @@
 // HEADER CONTAINER - JUMBOTRON
 .jumbotron{
   background: $purple;
-  border-radius: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
+  @include set_border_radius(0);
   color: $white;
   padding: 2rem 1rem;
   margin-bottom: 1rem;
+  @include breakpoint(xs){
+    h1{
+      margin-left: -15px;
+    }
+  }
 }
 // FORM
 form{
