@@ -1,0 +1,119 @@
+@font-face {
+  font-family: National;
+  font-display: swap;
+  src: url(https://static.parliament.uk/assets/National-LFSN-BookWeb.woff2) format("woff2"), url(https://static.parliament.uk/assets/National-LFSN-BookWeb.woff) format("woff");
+}
+
+@font-face {
+  font-family: National;
+  font-display: swap;
+  src: url(https://static.parliament.uk/assets/National-LFSN-Book-ItalicWeb.woff2) format("woff2"), url(https://static.parliament.uk/assets/National-LFSN-Book-ItalicWeb.woff) format("woff");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: National;
+  font-display: swap;
+  src: url(https://static.parliament.uk/assets/National-LFSN-SemiboldWeb.woff2) format("woff2"), url(https://static.parliament.uk/assets/National-LFSN-SemiboldWeb.woff) format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: National;
+  font-display: swap;
+  src: url(https://static.parliament.uk/assets/National-LFSN-Semibold-ItalicWeb.woff2) format("woff2"), url(https://static.parliament.uk/assets/National-LFSN-Semibold-ItalicWeb.woff) format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+
+#header-container {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.jumbotron {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  padding: 2em;
+  background-color: #373151;
+  color: #fff;
+  text-align: center;
+}
+
+form label {
+  display: block;
+  margin-bottom: 12px;
+  margin-top: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #4d4d4d;
+}
+
+form .form-control {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  padding: 10px;
+  margin-left: 0;
+}
+
+form input.form-control {
+  border: 1px solid #CAC9CD;
+  margin-left: -15px;
+}
+
+form input.form-control:focus {
+  border-color: #CAC9CD;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: #CAC9CD solid 5px;
+}
+
+footer {
+  border-top: 1px solid #CAC9CD;
+  text-align: center;
+  background-color: #f8f7f7;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background: #f8f7f7;
+  font-family: National,Arial,Helvetica Neue,Helvetica,sans-serif;
+  color: #4d4d4d;
+}
+
+h1 {
+  font-size: 2.75rem;
+  line-height: 45px;
+}
+
+h2 {
+  font-size: 2.0625rem;
+  line-height: 36px;
+  color: #373151;
+  margin-top: 42px;
+  margin-bottom: 18px;
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 30px;
+  margin-top: 24px;
+  color: #4d4d4d;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,24 @@
+@font-face{
+  font-family:National;
+  font-display:swap;
+  src:url(https://static.parliament.uk/assets/National-LFSN-BookWeb.woff2) format("woff2"),url(https://static.parliament.uk/assets/National-LFSN-BookWeb.woff) format("woff")
+}
+@font-face{
+  font-family:National;
+  font-display:swap;
+  src:url(https://static.parliament.uk/assets/National-LFSN-Book-ItalicWeb.woff2) format("woff2"),url(https://static.parliament.uk/assets/National-LFSN-Book-ItalicWeb.woff) format("woff");
+  font-style:italic
+}
+@font-face{
+  font-family:National;
+  font-display:swap;
+  src:url(https://static.parliament.uk/assets/National-LFSN-SemiboldWeb.woff2) format("woff2"),url(https://static.parliament.uk/assets/National-LFSN-SemiboldWeb.woff) format("woff");
+  font-weight:500
+}
+@font-face{
+  font-family:National;
+  font-display:swap;
+  src:url(https://static.parliament.uk/assets/National-LFSN-Semibold-ItalicWeb.woff2) format("woff2"),url(https://static.parliament.uk/assets/National-LFSN-Semibold-ItalicWeb.woff) format("woff");
+  font-weight:500;
+  font-style:italic
+}

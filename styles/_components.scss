@@ -1,0 +1,62 @@
+// HEADER CONTAINER - JUMBOTRON
+#header-container{
+  padding-right: 0;
+  padding-left: 0;
+  
+}
+
+.jumbotron {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  padding: 2em;
+  background-color: $purple;
+  color: $white;
+  text-align: center;
+}
+
+// FORM
+form{
+  label{
+    display: block;
+    margin-bottom: 12px;
+    margin-top: 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: $text_colour;
+  }
+  .form-control{
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    padding: 10px;
+    margin-left: 0;
+  }
+  input.form-control{
+    border: 1px solid $divider_colour;
+    margin-left: -15px;
+    &:focus{
+      border-color: $divider_colour;
+      box-shadow: none;
+      outline: $divider_colour solid 5px;
+    }
+  }
+}
+
+// FOOTER
+
+footer{
+  border-top: 1px solid $divider_colour;
+  text-align: center;
+  background-color: $grey-background;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 20px;
+  p{
+    font-size: 1rem;
+  }
+}
