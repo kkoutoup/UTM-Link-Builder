@@ -26,21 +26,16 @@
   font-style: italic;
 }
 
-#header-container {
-  padding-right: 0;
-  padding-left: 0;
-}
-
 .jumbotron {
+  background: #373151;
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
-  padding: 2em;
-  background-color: #373151;
   color: #fff;
-  text-align: center;
+  padding: 2rem 1rem;
+  margin-bottom: 1rem;
 }
 
 form label {
@@ -64,7 +59,6 @@ form .form-control {
 
 form input.form-control {
   border: 1px solid #CAC9CD;
-  margin-left: -15px;
 }
 
 form input.form-control:focus {

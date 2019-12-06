@@ -1,22 +1,15 @@
 // HEADER CONTAINER - JUMBOTRON
-#header-container{
-  padding-right: 0;
-  padding-left: 0;
-  
-}
-
-.jumbotron {
+.jumbotron{
+  background: $purple;
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
-  padding: 2em;
-  background-color: $purple;
   color: $white;
-  text-align: center;
+  padding: 2rem 1rem;
+  margin-bottom: 1rem;
 }
-
 // FORM
 form{
   label{
@@ -38,7 +31,6 @@ form{
   }
   input.form-control{
     border: 1px solid $divider_colour;
-    margin-left: -15px;
     &:focus{
       border-color: $divider_colour;
       box-shadow: none;
