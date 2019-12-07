@@ -93,10 +93,58 @@
           </form>
         </div>
       </div>
+      <h2>Enable optional fields</h2>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="optional-fields-toggle">
+        <label class="form-check-label">Tick the box to toggle optional fields</label>
+      </div>
       <button class="btn btn-primary">Generate Link</button>
+      <div id="optional-fields-container">
+        <h2>Optional Fields</h2>
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <form>
+              <label for="term">Term</label>
+              <div class="input-group">
+                <select class="custom-select" id="term">
+                  <option selected>Select an option...</option>
+                  <option value="First">First</option>
+                  <option value="Second">Second</option>
+                  <option value="Third">Third</option>
+                  <option value="Fourth">Fourth</option>
+                  <option value="Fifth">Fifth</option>
+                  <option value="Sixth">Sixth</option>
+                  <option value="Seventh">Seventh</option>
+                </select>
+              </div>
+              <div class="explainer-container">
+                <img src="icons/icon.svg" alt="information-icon">
+                <span class="text-muted explainer-text">Used when there are multiple links to the same destination or
+                  multiple adverst going to the same news story/Shorthand</span>
+              </div>
+            </form>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <form>
+              <label for="content">Content</label>
+              <div class="input-group">
+                <select class="custom-select" id="content">
+                  <option selected>Select an option...</option>
+                  <option value="Paid">Paid</option>
+                  <option value="Organic">Organic</option>
+                </select>
+              </div>
+              <div class="explainer-container">
+                <img src="icons/icon.svg" alt="information-icon">
+                <span class="text-muted explainer-text">Used to separate paid/organic. Also used for A/B testing</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--end optional fields container-->
     </div>
-    </div>
-    </div>
+    <!--end container-->
   </main>
   <footer>
     <div class="container">
