@@ -12,6 +12,9 @@
 }
 
 // FORM
+.form-group{
+  margin-bottom: 0;
+}
 form{
   margin-top: 2rem;
   label{
@@ -40,7 +43,7 @@ form{
     }
   }
   textarea{
-    resize: horizontal;
+    resize: vertical;
   }
 }
 
@@ -48,7 +51,7 @@ form{
 .custom-select{
   @include set_border_radius(0);
   border: 1px solid $divider_colour;
-  height: 48px;
+  height: 52px;
   font-size: 1.2rem;
   background-image:
     linear-gradient(45deg, transparent 50%, $text_colour 50%),
@@ -87,7 +90,7 @@ footer{
 // BUTTON
 button{
   cursor: pointer;
-
+  margin-top: 5rem;
 }
 .btn-primary{
   background: $light_blue;
@@ -100,8 +103,8 @@ button{
   &:hover{
     background-color: $dark_blue;
     border-color: $dark_blue;
-    transition: none;
     text-decoration:none;
+    transition: none;
     -webkit-transition: none;
     -moz-transition: none;
     -ms-transition: none;
@@ -117,4 +120,19 @@ button{
     -ms-transition:none;
     -o-transition:none;
   }
+}
+
+// EXPLAINER TEXT
+.explainer-container{
+  margin-top: 10px;
+  margin-left: 2px;
+}
+.explainer-text{
+  font-size: 1rem;
+}
+img{
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: middle;  
 }

@@ -77,6 +77,10 @@ p {
   }
 }
 
+.form-group {
+  margin-bottom: 0;
+}
+
 form {
   margin-top: 2rem;
 }
@@ -112,7 +116,7 @@ form textarea.form-control:focus, form input.form-control:focus {
 }
 
 form textarea {
-  resize: horizontal;
+  resize: vertical;
 }
 
 .custom-select {
@@ -122,7 +126,7 @@ form textarea {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border: 1px solid #CAC9CD;
-  height: 48px;
+  height: 52px;
   font-size: 1.2rem;
   background-image: linear-gradient(45deg, transparent 50%, #4d4d4d 50%), linear-gradient(135deg, #4d4d4d 50%, transparent 50%);
   background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px);
@@ -156,6 +160,7 @@ footer p {
 
 button {
   cursor: pointer;
+  margin-top: 5rem;
 }
 
 .btn-primary {
@@ -172,8 +177,8 @@ button {
 .btn-primary:hover {
   background-color: #214282;
   border-color: #214282;
-  transition: none;
   text-decoration: none;
+  transition: none;
   -webkit-transition: none;
   -moz-transition: none;
   -ms-transition: none;
@@ -189,5 +194,21 @@ button {
   -moz-transition: none;
   -ms-transition: none;
   -o-transition: none;
+}
+
+.explainer-container {
+  margin-top: 10px;
+  margin-left: 2px;
+}
+
+.explainer-text {
+  font-size: 1rem;
+}
+
+img {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: middle;
 }
 /*# sourceMappingURL=styles.css.map */
