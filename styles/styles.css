@@ -42,6 +42,7 @@ body {
 h1 {
   font-size: 2.75rem;
   line-height: 45px;
+  color: #fff;
 }
 
 h2 {
@@ -66,7 +67,6 @@ p {
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
-  color: #fff;
   padding: 2rem 1rem;
   margin-bottom: 1rem;
 }
@@ -99,16 +99,20 @@ form .form-control {
   margin-left: 0;
 }
 
-form input.form-control {
+form textarea.form-control, form input.form-control {
   border: 1px solid #CAC9CD;
   font-size: 1.2rem;
 }
 
-form input.form-control:focus {
+form textarea.form-control:focus, form input.form-control:focus {
   border-color: #CAC9CD;
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: #CAC9CD solid 5px;
+}
+
+form textarea {
+  resize: horizontal;
 }
 
 .custom-select {
@@ -120,6 +124,10 @@ form input.form-control:focus {
   border: 1px solid #CAC9CD;
   height: 48px;
   font-size: 1.2rem;
+  background-image: linear-gradient(45deg, transparent 50%, #4d4d4d 50%), linear-gradient(135deg, #4d4d4d 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
 }
 
 .custom-select:focus {
@@ -127,6 +135,7 @@ form input.form-control:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: #CAC9CD solid 5px;
+  outline-offset: -2px;
 }
 
 footer {
@@ -143,5 +152,42 @@ footer {
 
 footer p {
   font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #2b57ab;
+  border-color: transparent;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.btn-primary:visited {
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #214282;
+  border-color: #214282;
+  transition: none;
+  text-decoration: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+}
+
+.btn-primary:focus, .btn-primary:active {
+  border: 1px solid #214282;
+  background-color: #2b57ab;
+  color: #fff;
+  transition: none;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
 }
 /*# sourceMappingURL=styles.css.map */

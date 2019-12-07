@@ -2,7 +2,6 @@
 .jumbotron{
   background: $purple;
   @include set_border_radius(0);
-  color: $white;
   padding: 2rem 1rem;
   margin-bottom: 1rem;
   @include breakpoint(xs){
@@ -31,7 +30,7 @@ form{
     padding: 10px;
     margin-left: 0;
   }
-  input.form-control{
+  textarea.form-control, input.form-control{
     border: 1px solid $divider_colour;
     font-size: 1.2rem;
     &:focus{
@@ -39,6 +38,9 @@ form{
       box-shadow: none;
       outline: $divider_colour solid 5px;
     }
+  }
+  textarea{
+    resize: horizontal;
   }
 }
 
@@ -48,10 +50,21 @@ form{
   border: 1px solid $divider_colour;
   height: 48px;
   font-size: 1.2rem;
+  background-image:
+    linear-gradient(45deg, transparent 50%, $text_colour 50%),
+    linear-gradient(135deg, $text_colour 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px);
+  background-size:
+    5px 5px,
+    5px 5px;
+  background-repeat: no-repeat;
   &:focus{
     border-color: $divider_colour;
     box-shadow: none;
     outline: $divider_colour solid 5px;
+    outline-offset: -2px;
   }
 }
 
@@ -68,5 +81,40 @@ footer{
   margin-bottom:0;
   p{
     font-size: 1rem;
+  }
+}
+
+// BUTTON
+button{
+  cursor: pointer;
+
+}
+.btn-primary{
+  background: $light_blue;
+  border-color: transparent;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  &:visited{
+    color: $white;
+  }
+  &:hover{
+    background-color: $dark_blue;
+    border-color: $dark_blue;
+    transition: none;
+    text-decoration:none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+  }
+  &:focus, &:active{
+    border: 1px solid $dark_blue;
+    background-color: $light_blue;
+    color: $white;
+    transition:none;
+    -webkit-transition:none;
+    -moz-transition:none;
+    -ms-transition:none;
+    -o-transition:none;
   }
 }
