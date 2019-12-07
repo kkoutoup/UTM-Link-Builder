@@ -11,12 +11,13 @@
     }
   }
 }
+
 // FORM
 form{
+  margin-top: 2rem;
   label{
     display: block;
-    margin-bottom: 12px;
-    margin-top: 0;
+    margin: 0 0 5px 0;
     font-size: 1.25rem;
     line-height: 1.5;
     color: $text_colour;
@@ -32,6 +33,7 @@ form{
   }
   input.form-control{
     border: 1px solid $divider_colour;
+    font-size: 1.2rem;
     &:focus{
       border-color: $divider_colour;
       box-shadow: none;
@@ -40,15 +42,30 @@ form{
   }
 }
 
-// FOOTER
+// DROPDOWN
+.custom-select{
+  @include set_border_radius(0);
+  border: 1px solid $divider_colour;
+  height: 48px;
+  font-size: 1.2rem;
+  &:focus{
+    border-color: $divider_colour;
+    box-shadow: none;
+    outline: $divider_colour solid 5px;
+  }
+}
 
+// FOOTER
 footer{
   border-top: 1px solid $divider_colour;
+  background-color: $grey_background;
+  width: 100%;
   text-align: center;
-  background-color: $grey-background;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  padding-bottom: 10px;
   margin-top: 20px;
+  margin-bottom:0;
   p{
     font-size: 1rem;
   }

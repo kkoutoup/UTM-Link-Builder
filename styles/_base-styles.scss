@@ -1,0 +1,31 @@
+// BASE STYLES
+html{
+  font-size: 100%;
+}
+
+body{
+  background: $grey_background;
+  font-family: National,Arial,Helvetica Neue,Helvetica,sans-serif;
+  color: $text_colour;
+}
+
+h1{
+  font-size: 2.75rem;
+  line-height: 45px;
+}
+
+h2{
+  font-size: 2.0625rem;
+  line-height: 36px;
+  color: $purple;
+  margin-top: 42px;
+  margin-bottom: 18px;
+}
+
+p{
+  font-size: 1.25rem;
+  line-height: 30px;
+  margin-top: 24px;
+  color: $text_colour;
+}
+
