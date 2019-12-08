@@ -69,6 +69,24 @@ form{
   }
 }
 
+// TABLE
+.table.default-table{
+ thead{
+   tr th{
+     border-bottom: none;
+     border-top: none;
+   }
+ }
+ tbody{
+   tr:nth-child(odd){
+     background: $table_cell_background;
+   }
+   tr td{
+     border-top: none;
+   }
+ }
+}
+
 // FOOTER
 footer{
   border-top: 1px solid $divider_colour;
@@ -118,21 +136,6 @@ button{
     -ms-transition:none;
     -o-transition:none;
   }
-}
-
-// EXPLAINER TEXT
-.explainer-container{
-  margin-top: 10px;
-  margin-left: 2px;
-}
-.explainer-text{
-  font-size: 1rem;
-}
-img{
-  width: 14px;
-  height: 14px;
-  display: inline-block;
-  vertical-align: middle;  
 }
 
 // OPTIONAL FIELDS CONTAINER

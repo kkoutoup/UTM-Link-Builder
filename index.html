@@ -22,22 +22,16 @@
   </header>
   <main>
     <div class="container">
-      <h2>Mandatory Fields</h2>
       <div class="row">
         <div class="col-sm-12 col-md-6">
+          <h2>Mandatory Fields</h2>
           <form>
             <div class="form-group">
               <label for="baseURL">BaseURL</label>
               <textarea class="form-control" id="baseURL" rows="3"
                 placeholder="i.e. https://www.parliament.uk/example"></textarea>
             </div>
-            <div class="explainer-container">
-              <img src="icons/icon.svg" alt="information-icon">
-              <span class="text-muted explainer-text">The actual URL that directs to a page on the website</span>
-            </div>
           </form>
-        </div>
-        <div class="col-sm-12 col-md-6">
           <form>
             <label for="source">Source</label>
             <div class="input-group">
@@ -52,28 +46,7 @@
                 <option value="Forum">Forum</option>
               </select>
             </div>
-            <div class="explainer-container">
-              <img src="icons/icon.svg" alt="information-icon">
-              <span class="text-muted explainer-text">The platform on which the URL is being served (Facebook, Twitter,
-                Instagram etc.)</span>
-            </div>
           </form>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <form>
-            <div class="form-group">
-              <label for="campaign">Campaign</label>
-              <input type="text" class="form-control" id="campaign" placeholder="i.e. fac-kurdish-campaign">
-            </div>
-            <div class="explainer-container">
-              <img src="icons/icon.svg" alt="information-icon">
-              <span class="text-muted explainer-text">The unique campaign identifier</span>
-            </div>
-          </form>
-        </div>
-        <div class="col-sm-12 col-md-6">
           <form>
             <label for="medium">Medium</label>
             <div class="input-group">
@@ -86,63 +59,78 @@
                 <option value="Newsletter">Newsletter</option>
               </select>
             </div>
-            <div class="explainer-container">
-              <img src="icons/icon.svg" alt="information-icon">
-              <span class="text-muted explainer-text">The way in which the URL is being served</span>
+          </form>
+          <form>
+            <div class="form-group">
+              <label for="campaign">Campaign</label>
+              <input type="text" class="form-control" id="campaign" placeholder="i.e. fac-kurdish-campaign">
             </div>
           </form>
         </div>
-      </div>
-      <h2>Enable optional fields</h2>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="optional-fields-toggle">
-        <label class="form-check-label">Tick the box to toggle optional fields</label>
-      </div>
-      <button class="btn btn-primary">Generate Link</button>
-      <div id="optional-fields-container">
-        <h2>Optional Fields</h2>
-        <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <form>
-              <label for="term">Term</label>
-              <div class="input-group">
-                <select class="custom-select" id="term">
-                  <option selected>Select an option...</option>
-                  <option value="First">First</option>
-                  <option value="Second">Second</option>
-                  <option value="Third">Third</option>
-                  <option value="Fourth">Fourth</option>
-                  <option value="Fifth">Fifth</option>
-                  <option value="Sixth">Sixth</option>
-                  <option value="Seventh">Seventh</option>
-                </select>
-              </div>
-              <div class="explainer-container">
-                <img src="icons/icon.svg" alt="information-icon">
-                <span class="text-muted explainer-text">Used when there are multiple links to the same destination or
-                  multiple adverst going to the same news story/Shorthand</span>
-              </div>
-            </form>
-          </div>
-          <div class="col-sm-12 col-md-6">
-            <form>
-              <label for="content">Content</label>
-              <div class="input-group">
-                <select class="custom-select" id="content">
-                  <option selected>Select an option...</option>
-                  <option value="Paid">Paid</option>
-                  <option value="Organic">Organic</option>
-                </select>
-              </div>
-              <div class="explainer-container">
-                <img src="icons/icon.svg" alt="information-icon">
-                <span class="text-muted explainer-text">Used to separate paid/organic. Also used for A/B testing</span>
-              </div>
-            </form>
-          </div>
+        <!--end column-->
+        <div class="col-sm-12 col-md-6">
+          <h2>Term Explainer</h2>
+          <table class="table default-table">
+            <thead>
+              <tr>
+                <th>Term</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>BaseURL</td>
+                <td>This is the actual URL that directs to a page on the website</td>
+              </tr>
+              <tr>
+                <td>Source</td>
+                <td>The source is the platform on which the URL is being served (Facebook, Twitter, email etc.)</td>
+              </tr>
+              <tr>
+                <td>Medium</td>
+                <td>The way in which the URL is being served</td>
+              </tr>
+              <tr>
+                <td>Campaign</td>
+                <td>This is unique to each item being promoted and will change every time.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      <!--end optional fields container-->
+      <!--end row-->
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h2>Optional Fields</h2>
+          <form>
+            <label for="term">Term</label>
+            <div class="input-group">
+              <select class="custom-select" id="term">
+                <option selected>Select an option...</option>
+                <option value="First">First</option>
+                <option value="Second">Second</option>
+                <option value="Third">Third</option>
+                <option value="Fourth">Fourth</option>
+                <option value="Fifth">Fifth</option>
+                <option value="Sixth">Sixth</option>
+                <option value="Seventh">Seventh</option>
+              </select>
+            </div>
+          </form>
+          <form>
+            <label for="content">Content</label>
+            <div class="input-group">
+              <select class="custom-select" id="content">
+                <option selected>Select an option...</option>
+                <option value="Paid">Paid</option>
+                <option value="Organic">Organic</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <!--end column-->
+      </div>
+      <!--end row-->
     </div>
     <!--end container-->
   </main>

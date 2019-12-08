@@ -142,6 +142,19 @@ form textarea {
   outline-offset: -2px;
 }
 
+.table.default-table thead tr th {
+  border-bottom: none;
+  border-top: none;
+}
+
+.table.default-table tbody tr:nth-child(odd) {
+  background: #EBE9E8;
+}
+
+.table.default-table tbody tr td {
+  border-top: none;
+}
+
 footer {
   border-top: 1px solid #CAC9CD;
   background-color: #f8f7f7;
@@ -194,22 +207,6 @@ button {
   -moz-transition: none;
   -ms-transition: none;
   -o-transition: none;
-}
-
-.explainer-container {
-  margin-top: 10px;
-  margin-left: 2px;
-}
-
-.explainer-text {
-  font-size: 1rem;
-}
-
-img {
-  width: 14px;
-  height: 14px;
-  display: inline-block;
-  vertical-align: middle;
 }
 
 #optional-fields-container {
