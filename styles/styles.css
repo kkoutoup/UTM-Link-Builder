@@ -142,16 +142,16 @@ form textarea {
   outline-offset: -2px;
 }
 
-.table.default-table thead tr th {
+.table thead tr th {
   border-bottom: none;
   border-top: none;
 }
 
-.table.default-table tbody tr:nth-child(odd) {
+.table tbody tr:nth-child(odd) {
   background: #EBE9E8;
 }
 
-.table.default-table tbody tr td {
+.table tbody tr td {
   border-top: none;
 }
 
@@ -163,7 +163,7 @@ footer {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-bottom: 10px;
-  margin-top: 20px;
+  margin-top: 120px;
   margin-bottom: 0;
 }
 
@@ -211,42 +211,5 @@ button {
 
 #optional-fields-container {
   display: none;
-}
-
-.form-check-label {
-  font-size: 1.25rem;
-  margin-left: 23px;
-  margin-top: 8px;
-}
-
-input[type=checkbox] {
-  position: absolute;
-  cursor: pointer;
-}
-
-input[type=checkbox]:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 38px;
-  height: 38px;
-  top: 0;
-  left: 0;
-  border: 2px solid #CAC9CD;
-  background-color: white;
-}
-
-input[type=checkbox]:checked:after {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 18px;
-  border: solid #4d4d4d;
-  border-width: 0 4px 4px 0;
-  position: relative;
-  top: 8px;
-  left: 14px;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
 }
 /*# sourceMappingURL=styles.css.map */

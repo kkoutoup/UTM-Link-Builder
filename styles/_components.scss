@@ -70,7 +70,7 @@ form{
 }
 
 // TABLE
-.table.default-table{
+.table{
  thead{
    tr th{
      border-bottom: none;
@@ -96,7 +96,7 @@ footer{
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-bottom: 10px;
-  margin-top: 20px;
+  margin-top: 120px;
   margin-bottom:0;
   p{
     font-size: 1rem;
@@ -141,40 +141,4 @@ button{
 // OPTIONAL FIELDS CONTAINER
 #optional-fields-container{
   display: none;
-}
-
-.form-check-label{
-  font-size: 1.25rem;
-  margin-left: 23px;
-  margin-top: 8px;
-}
-
-input[type=checkbox] {
-  position: absolute;
-  cursor: pointer;
-  &:before{
-    content: "";
-    display: block;
-    position: absolute;
-    width: 38px;
-    height: 38px;
-    top: 0;
-    left: 0;
-    border: 2px solid $divider_colour;
-    background-color: white;
-  }
-  &:checked:after{
-    content: "";
-    display: block;
-    width: 10px;
-    height: 18px;
-    border: solid $text_colour;
-    border-width: 0 4px 4px 0;
-    position: relative;
-    top: 8px;
-    left: 14px;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
 }
