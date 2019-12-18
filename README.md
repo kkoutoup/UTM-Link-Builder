@@ -1,4 +1,4 @@
-# UTM-Link-Builder
+# UTM Link Builder
 A single page app that helps people build UTM codes allowing for more effective GA tracking.
 
 ### Category
