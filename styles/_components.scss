@@ -41,6 +41,11 @@ form{
       box-shadow: none;
       outline: $divider_colour solid 5px;
     }
+    &.error{
+      @extend :focus;
+      border: 2px solid $error_red;
+      outline: none;
+    }
   }
   textarea{
     resize: vertical;
@@ -67,6 +72,11 @@ form{
     outline: $divider_colour solid 5px;
     outline-offset: -2px;
   }
+  &.error{
+    @extend :focus;
+    border: 2px solid $error_red;
+    outline: none;
+  }
 }
 
 // TABLE
@@ -85,6 +95,12 @@ form{
      border-top: none;
    }
  }
+}
+
+// ERROR MESSAGES
+p.error-message{
+  display: none;
+  color: $error_red;
 }
 
 // FOOTER
@@ -136,9 +152,4 @@ button{
     -ms-transition:none;
     -o-transition:none;
   }
-}
-
-// OPTIONAL FIELDS CONTAINER
-#optional-fields-container{
-  display: none;
 }

@@ -108,11 +108,16 @@ form textarea.form-control, form input.form-control {
   font-size: 1.2rem;
 }
 
-form textarea.form-control:focus, form input.form-control:focus {
+form textarea.form-control:focus, form textarea.form-control.error, form input.form-control:focus, form input.form-control.error {
   border-color: #CAC9CD;
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: #CAC9CD solid 5px;
+}
+
+form textarea.form-control.error, form input.form-control.error {
+  border: 2px solid #a72326;
+  outline: none;
 }
 
 form textarea {
@@ -134,12 +139,17 @@ form textarea {
   background-repeat: no-repeat;
 }
 
-.custom-select:focus {
+.custom-select:focus, form textarea.custom-select.form-control.error, form input.custom-select.form-control.error, .custom-select.error {
   border-color: #CAC9CD;
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: #CAC9CD solid 5px;
   outline-offset: -2px;
+}
+
+.custom-select.error {
+  border: 2px solid #a72326;
+  outline: none;
 }
 
 .table thead tr th {
@@ -153,6 +163,11 @@ form textarea {
 
 .table tbody tr td {
   border-top: none;
+}
+
+p.error-message {
+  display: none;
+  color: #a72326;
 }
 
 footer {
@@ -198,7 +213,7 @@ button {
   -o-transition: none;
 }
 
-.btn-primary:focus, .btn-primary:active {
+.btn-primary:focus, form textarea.btn-primary.form-control.error, form input.btn-primary.form-control.error, .btn-primary.custom-select.error, .btn-primary:active {
   border: 1px solid #214282;
   background-color: #2b57ab;
   color: #fff;
@@ -207,9 +222,5 @@ button {
   -moz-transition: none;
   -ms-transition: none;
   -o-transition: none;
-}
-
-#optional-fields-container {
-  display: none;
 }
 /*# sourceMappingURL=styles.css.map */
