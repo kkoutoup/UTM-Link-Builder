@@ -46,11 +46,18 @@ function checkCampaignName(){
   const campaignFieldValue = document.getElementById("campaign").value;
   // use regex to check input and inform user of errors, offer examples
   const campaignFieldRegex = /^[a-z0-9]+\-?([a-z0-9]+\-)*[a-z0-9]+$/;
+  const onlyNumbersRegex = /^\d+$/;
   const campaignFieldError = document.getElementById("campaignError");
-  // check input
-  if(!campaignFieldRegex.test(campaignFieldValue)){
+  // wrong input
+  if(campaignFieldValue.length < 4 || campaignFieldValue.length > 40){
     campaignFieldError.style.display = "block";
-    campaignFieldError.textContent = "Please make sure this field is not empty and follows the correct structure"
+    campaignFieldError.textContent = "Please make sure this part of the URL is between 4 and 40 characters";
+  }else if(!campaignFieldRegex.test(campaignFieldValue)){
+    campaignFieldError.style.display = "block";
+    campaignFieldError.textContent = "Please make sure this field is not empty and follows the correct structure";
+  }else if(onlyNumbersRegex.test(campaignFieldValue)){
+    campaignFieldError.style.display = "block";
+    campaignFieldError.textContent = "Please make sure this field is a combination of numbers and letters";
   }else{
     campaignFieldError.style.display = "none";
     campaignFieldError.textContent = '';
