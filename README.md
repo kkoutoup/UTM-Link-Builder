@@ -11,7 +11,7 @@ Help my team's members create UTM codes for ad campaigns across different platfo
 The app needs to be simple, intuitive with minimal dependencies so it can be used by of people of different, in some cases non-technical, backgrounds. Therefore it is a single HTML page built with Bootstrap and vanilla JS for error checking and code production.
 
 ### Dependencies
-Built with Bootstrap, SASS, HTML, JS and the following modules
+Built with HTML, SASS, JS and Bootstrap
 - [Bootstrap](https://getbootstrap.com/)
 
 ### Developed by
