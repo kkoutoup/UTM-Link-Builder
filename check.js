@@ -12,15 +12,15 @@ let urlParameters = {
 }
 
 // Event Listeners
+// check inputs for all fields
 urlButton.addEventListener("click", checkDropdown("source", "sourceError", "Source"), false);
 urlButton.addEventListener("click", checkDropdown("medium", "mediumError", "Medium"), false);
 urlButton.addEventListener("click", checkDropdown("term", "termError", "Term"), false);
 urlButton.addEventListener("click", checkDropdown("content", "contentError", "Content"), false);
-urlButton.addEventListener("click", checkCampaignName);
 urlButton.addEventListener("click", checkBaseURL);
-
-// test
-urlButton.addEventListener("click", logParams);
+urlButton.addEventListener("click", checkCampaignName);
+// generate utl link
+urlButton.addEventListener("click", generateLink);
 
 // check base URL
 function checkBaseURL(){
@@ -36,7 +36,7 @@ function checkBaseURL(){
   }else{
     errorContainer.style.display = "none";
     errorContainer.textContent = "";
-    urlParameters.BaseURL = baseURLContainer.value;
+    urlParameters.BaseURL = baseURLContainer.value+"?";
   }
 }
 
@@ -84,7 +84,11 @@ function checkCampaignName(){
   }
 }
 
-// test
-function logParams(){
-  console.log(urlParameters);
+// generate link
+function generateLink(){
+ let finalURL = '';
+ Object.keys(urlParameters).forEach(key=>{
+  finalURL += urlParameters[key]+"&";
+ });
+ document.getElementById('result').textContent = finalURL.slice(0,-1);
 }
