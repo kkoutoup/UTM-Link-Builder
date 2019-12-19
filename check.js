@@ -37,7 +37,6 @@ function checkDropdown(elementID, errorContainerID, parameterName){
       errorContainer.style.display = "none";
       errorContainer.textContent = "";
       urlParameters[parameterName] = ("utm_"+parameterName+"="+element.value).toLowerCase();
-      console.log(urlParameters);
     }
   }
 }
