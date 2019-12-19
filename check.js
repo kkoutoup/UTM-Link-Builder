@@ -48,7 +48,7 @@ function checkCampaignName(){
   const campaignFieldRegex = /^[a-z0-9]+\-?([a-z0-9]+\-)*[a-z0-9]+$/;
   const onlyNumbersRegex = /^\d+$/;
   const campaignFieldError = document.getElementById("campaignError");
-  // wrong input
+  // check input
   if(campaignFieldValue.length < 4 || campaignFieldValue.length > 40){
     campaignFieldError.style.display = "block";
     campaignFieldError.textContent = "Please make sure this part of the URL is between 4 and 40 characters";
