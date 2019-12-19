@@ -30,3 +30,10 @@
     @warn "Breakpoint mixin supports: xs, sm, md, lg";
   }
 }
+
+/*other breakpoints*/
+@mixin custom_breakpoint($value){
+  @media (max-width:$value+'px'){
+    @content;
+  }
+}

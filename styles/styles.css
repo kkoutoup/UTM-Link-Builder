@@ -29,6 +29,7 @@
 /*MIXINS*/
 /*Media Queries*/
 /*bootstrap breakpoints*/
+/*other breakpoints*/
 html {
   font-size: 100%;
 }
@@ -165,7 +166,7 @@ form textarea {
   border-top: none;
 }
 
-p.error-message {
+p.error-message, ul.example {
   display: none;
   color: #a72326;
 }

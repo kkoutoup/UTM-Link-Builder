@@ -98,7 +98,7 @@ form{
 }
 
 // ERROR MESSAGES
-p.error-message{
+p.error-message, ul.example{
   display: none;
   color: $error_red;
 }
