@@ -21,7 +21,6 @@ urlButton.addEventListener("click", checkCampaignName);
 // test
 urlButton.addEventListener("click", logParams);
 
-
 // re-usable for all dropdowns on page
 function checkDropdown(elementID, errorContainerID, parameterName){
   return function(){
@@ -29,7 +28,7 @@ function checkDropdown(elementID, errorContainerID, parameterName){
     const element = document.getElementById(elementID);
     // error message container
     const errorContainer = document.getElementById(errorContainerID);
-    // check for input
+    // check input
     if(element.value == "Select an option..."){
       errorContainer.style.display = "block";
       errorContainer.textContent = "Please make sure one of the dropdown options is selected";
@@ -48,8 +47,7 @@ function checkCampaignName(){
   // use regex to check input and inform user of errors, offer examples
   const campaignFieldRegex = /^[a-z0-9]+\-?([a-z0-9]+\-)*[a-z0-9]+$/;
   const campaignFieldError = document.getElementById("campaignError");
-  
-  // no input
+  // check input
   if(!campaignFieldRegex.test(campaignFieldValue)){
     campaignFieldError.style.display = "block";
     campaignFieldError.textContent = "Please make sure this field is not empty and follows the correct structure"
@@ -59,7 +57,6 @@ function checkCampaignName(){
     urlParameters.Campaign = ("utm_campaign="+campaignFieldValue.trim()).toLowerCase();
   }
 }
-
 
 // test
 function logParams(){
