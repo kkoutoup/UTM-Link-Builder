@@ -17,9 +17,28 @@ urlButton.addEventListener("click", checkDropdown("medium", "mediumError", "Medi
 urlButton.addEventListener("click", checkDropdown("term", "termError", "Term"), false);
 urlButton.addEventListener("click", checkDropdown("content", "contentError", "Content"), false);
 urlButton.addEventListener("click", checkCampaignName);
+urlButton.addEventListener("click", checkBaseURL);
 
 // test
 urlButton.addEventListener("click", logParams);
+
+// check base URL
+function checkBaseURL(){
+  // target element
+  const baseURLContainer= document.getElementById("baseURL");
+  // error container
+  const errorContainer = document.getElementById("baseURLError");
+  // regex to test for valid url entry
+  const checkShorthandRegex = /https:\/\/houseofcommons.shorthandstories.com\/[\w]+\/index\.html$/;
+  if(!checkShorthandRegex.test(baseURLContainer.value)){
+    errorContainer.style.display = "block";
+    errorContainer.textContent = "Please make sure you enter a valid URL";
+  }else{
+    errorContainer.style.display = "none";
+    errorContainer.textContent = "";
+    urlParameters.BaseURL = baseURLContainer.value;
+  }
+}
 
 // re-usable for all dropdowns on page
 function checkDropdown(elementID, errorContainerID, parameterName){
