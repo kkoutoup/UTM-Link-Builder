@@ -29,8 +29,8 @@ function checkBaseURL(){
   // error container
   const errorContainer = document.getElementById("baseURLError");
   // regex to test for valid url entry
-  const checkShorthandRegex = /https:\/\/houseofcommons.shorthandstories.com\/[\w]+\/index\.html$/;
-  if(!checkShorthandRegex.test(baseURLContainer.value)){
+  const urlRegex = /(https:\/\/houseofcommons.shorthandstories.com\/[\w]+\/index\.html$)|(https:\/\/www\.parliament\.uk\/.*)/;
+  if(!urlRegex.test(baseURLContainer.value)){
     errorContainer.style.display = "block";
     errorContainer.textContent = "Please make sure you enter a valid URL";
   }else{
