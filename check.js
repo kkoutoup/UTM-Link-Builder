@@ -88,7 +88,9 @@ function checkCampaignName(){
 function generateLink(){
  let finalURL = '';
  Object.keys(urlParameters).forEach(key=>{
-  finalURL += urlParameters[key]+"&";
+   if(urlParameters[key] != ""){
+    finalURL += urlParameters[key]+"&";
+   }
  });
  document.getElementById('result').textContent = finalURL.slice(0,-1);
 }
