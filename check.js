@@ -12,10 +12,10 @@ let urlParameters = {
 }
 
 // Event Listeners
-urlButton.addEventListener('click', checkDropdown("source", "sourceError", "Source"), false);
-urlButton.addEventListener('click', checkDropdown("medium", "mediumError", "Medium"), false);
-urlButton.addEventListener('click', checkDropdown("term", "termError", "Term"), false);
-urlButton.addEventListener('click', checkDropdown("content", "contentError", "Content"), false);
+urlButton.addEventListener("click", checkDropdown("source", "sourceError", "Source"), false);
+urlButton.addEventListener("click", checkDropdown("medium", "mediumError", "Medium"), false);
+urlButton.addEventListener("click", checkDropdown("term", "termError", "Term"), false);
+urlButton.addEventListener("click", checkDropdown("content", "contentError", "Content"), false);
 urlButton.addEventListener("click", checkCampaignName);
 
 // test
