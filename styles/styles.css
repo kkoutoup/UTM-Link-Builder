@@ -139,9 +139,9 @@ p.error-message, ul.example {
   color: #a72326;
 }
 
-button {
+button.btn-primary {
   cursor: pointer;
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 .btn-primary {

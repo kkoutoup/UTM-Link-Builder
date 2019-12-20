@@ -104,6 +104,7 @@ function generateLink(){
    }
  });
  // check that all url parameters are there and generate link
+ console.log(check)
  if(check.length == 6){
   document.getElementById('result').style.display = 'block';
   document.getElementById('finalURL').textContent = finalURL.slice(0,-1);

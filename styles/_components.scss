@@ -101,9 +101,9 @@ p.error-message, ul.example{
 }
 
 // BUTTON
-button{
+button.btn-primary{
   cursor: pointer;
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 .btn-primary{
   background: $light_blue;
