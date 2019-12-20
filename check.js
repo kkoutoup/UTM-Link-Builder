@@ -98,6 +98,7 @@ function generateLink(){
  });
  // check that all url parameters are there and generate link
  if(check.length == 6){
-  document.getElementById('result').textContent = finalURL.slice(0,-1);
+  document.getElementById('result').style.display = 'block';
+  document.getElementById('finalURL').textContent = finalURL.slice(0,-1);
  }
 }

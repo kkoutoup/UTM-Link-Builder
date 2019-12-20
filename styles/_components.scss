@@ -47,9 +47,6 @@ form{
       outline: none;
     }
   }
-  textarea{
-    resize: vertical;
-  }
 }
 
 // DROPDOWN
@@ -103,22 +100,6 @@ p.error-message, ul.example{
   color: $error_red;
 }
 
-// FOOTER
-footer{
-  border-top: 1px solid $divider_colour;
-  background-color: $grey_background;
-  width: 100%;
-  text-align: center;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-bottom: 10px;
-  margin-top: 120px;
-  margin-bottom:0;
-  p{
-    font-size: 1rem;
-  }
-}
-
 // BUTTON
 button{
   cursor: pointer;
@@ -151,5 +132,26 @@ button{
     -moz-transition:none;
     -ms-transition:none;
     -o-transition:none;
+  }
+}
+
+// RESULT CONTAINER
+#result{
+  display:none;
+}
+
+// FOOTER
+footer{
+  border-top: 1px solid $divider_colour;
+  background-color: $grey_background;
+  width: 100%;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+  margin-top: 120px;
+  margin-bottom:0;
+  p{
+    font-size: 1rem;
   }
 }
