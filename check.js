@@ -51,6 +51,7 @@ function checkDropdown(elementID, errorContainerID, parameterName){
     if(element.value == "Select an option..."){
       errorContainer.style.display = "block";
       errorContainer.textContent = "Please make sure one of the dropdown options is selected";
+      console.log(errorContainer.parentNode.childNodes[6])
     }else{
       errorContainer.style.display = "none";
       errorContainer.textContent = "";
