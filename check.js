@@ -78,7 +78,7 @@ function checkCampaignName(){
     campaignFieldError.textContent = "Please make sure this field is not empty and follows the correct structure";
   }else if(onlyNumbersRegex.test(campaignFieldValue)){
     campaignFieldError.style.display = "block";
-    campaignFieldError.textContent = "Please make sure this field is a combination of numbers and letters";
+    campaignFieldError.textContent = "Please make sure this field is a combination of numbers and letters with dashes (-) in between";
   }else{
     campaignFieldError.style.display = "none";
     campaignFieldError.textContent = '';
@@ -89,10 +89,15 @@ function checkCampaignName(){
 // generate link
 function generateLink(){
  let finalURL = '';
+ check = [];
  Object.keys(urlParameters).forEach(key=>{
    if(urlParameters[key] != ""){
+    check.push('check')
     finalURL += urlParameters[key]+"&";
    }
  });
- document.getElementById('result').textContent = finalURL.slice(0,-1);
+ // check that all url parameters are there and generate link
+ if(check.length == 6){
+  document.getElementById('result').textContent = finalURL.slice(0,-1);
+ }
 }
