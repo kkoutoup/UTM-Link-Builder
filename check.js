@@ -31,11 +31,14 @@ function checkBaseURL(){
   // regex to test for valid url entry
   const urlRegex = /(https:\/\/houseofcommons.shorthandstories.com\/[\w]+\/index\.html$)|(https:\/\/www\.parliament\.uk\/.*)/;
   if(!urlRegex.test(baseURLContainer.value)){
+    // show error message and highlight relevant field
     errorContainer.style.display = "block";
     errorContainer.textContent = "Please make sure you enter a valid URL";
+    errorContainer.closest("form").children[0].children[2].classList.add("error");
   }else{
     errorContainer.style.display = "none";
     errorContainer.textContent = "";
+    errorContainer.closest("form").children[0].children[2].classList.remove("error");
     urlParameters.BaseURL = baseURLContainer.value+"?";
   }
 }
@@ -51,11 +54,11 @@ function checkDropdown(elementID, errorContainerID, parameterName){
     if(element.value == "Select an option..."){
       errorContainer.style.display = "block";
       errorContainer.textContent = "Please make sure one of the dropdown options is selected";
-      errorContainer.closest("form").children[2].children[0].classList.add('error');
+      errorContainer.closest("form").children[2].children[0].classList.add("error");
     }else{
       errorContainer.style.display = "none";
       errorContainer.textContent = "";
-      errorContainer.closest("form").children[2].children[0].classList.remove('error');
+      errorContainer.closest("form").children[2].children[0].classList.remove("error");
       urlParameters[parameterName] = ("utm_"+parameterName+"="+element.value).toLowerCase();
     }
   }
@@ -73,16 +76,20 @@ function checkCampaignName(){
   if(campaignFieldValue.length < 4 || campaignFieldValue.length > 40){
     campaignFieldError.style.display = "block";
     campaignFieldError.textContent = "Please make sure this part of the URL is between 4 and 40 characters";
+    campaignFieldError.closest("form").children[0].children[2].classList.add("error");
   }else if(!campaignFieldRegex.test(campaignFieldValue)){
     campaignFieldError.style.display = "block";
     campaignFieldError.textContent = "Please make sure this field is not empty and follows the correct structure";
+    campaignFieldError.closest("form").children[0].children[2].classList.add("error");
   }else if(onlyNumbersRegex.test(campaignFieldValue)){
     campaignFieldError.style.display = "block";
     campaignFieldError.textContent = "Please make sure this field is a combination of numbers and letters with dashes (-) in between";
+    campaignFieldError.closest("form").children[0].children[2].classList.add("error");
   }else{
     campaignFieldError.style.display = "none";
     campaignFieldError.textContent = '';
     urlParameters.Campaign = ("utm_campaign="+campaignFieldValue.trim()).toLowerCase();
+    campaignFieldError.closest("form").children[0].children[2].classList.remove("error");
   }
 }
 
