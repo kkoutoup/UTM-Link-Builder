@@ -92,7 +92,7 @@ function generateLink(){
  check = [];
  Object.keys(urlParameters).forEach(key=>{
    if(urlParameters[key] != ""){
-    check.push('check')
+    check.push('check');
     finalURL += urlParameters[key]+"&";
    }
  });
