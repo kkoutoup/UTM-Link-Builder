@@ -51,7 +51,7 @@ function checkDropdown(elementID, errorContainerID, parameterName){
     // error message container
     const errorContainer = document.getElementById(errorContainerID);
     // check input
-    if(element.value == "Select an option..."){
+    if(element.value == "Select an option..." && element.id == ("source"||"medium")){
       errorContainer.style.display = "block";
       errorContainer.textContent = "Please make sure one of the dropdown options is selected";
       errorContainer.closest("form").children[2].children[0].classList.add("error");
