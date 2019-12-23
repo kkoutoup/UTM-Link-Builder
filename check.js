@@ -13,10 +13,10 @@ let urlParameters = {
 
 // Event Listeners
 // check inputs for all fields
-urlButton.addEventListener("click", checkDropdown("source", "sourceError", "Source"), false);
-urlButton.addEventListener("click", checkDropdown("medium", "mediumError", "Medium"), false);
-urlButton.addEventListener("click", checkDropdown("term", "termError", "Term"), false);
-urlButton.addEventListener("click", checkDropdown("content", "contentError", "Content"), false);
+urlButton.addEventListener("click", checkRequiredField("source", "sourceError", "Source"), false);
+urlButton.addEventListener("click", checkRequiredField("medium", "mediumError", "Medium"), false);
+urlButton.addEventListener("click", checkOptionalField("term", "termError", "Term"), false);
+urlButton.addEventListener("click", checkOptionalField("content", "contentError", "Content"), false);
 urlButton.addEventListener("click", checkBaseURL);
 urlButton.addEventListener("click", checkCampaignName);
 // generate utl link
@@ -43,8 +43,8 @@ function checkBaseURL(){
   }
 }
 
-// re-usable for all dropdowns on page
-function checkDropdown(elementID, errorContainerID, parameterName){
+// re-usable for mandatory dropdowns on page
+function checkRequiredField(elementID, errorContainerID, parameterName){
   return function(){
     // target element
     const element = document.getElementById(elementID);
@@ -59,6 +59,18 @@ function checkDropdown(elementID, errorContainerID, parameterName){
       errorContainer.style.display = "none";
       errorContainer.textContent = "";
       errorContainer.closest("form").children[2].children[0].classList.remove("error");
+      urlParameters[parameterName] = ("utm_"+parameterName+"="+element.value).toLowerCase();
+    }
+  }
+}
+
+// re-usable for all optional fields
+function checkOptionalField(elementID, errorContainerID, parameterName){
+  return function(){
+    // target element
+    const element = document.getElementById(elementID);
+    // check for input
+    if(element.value != "Select an option..."){
       urlParameters[parameterName] = ("utm_"+parameterName+"="+element.value).toLowerCase();
     }
   }
@@ -97,15 +109,19 @@ function checkCampaignName(){
 function generateLink(){
  let finalURL = '';
  check = [];
+ shouldContain =  ["BaseURL", "Source", "Medium", "Campaign"];
  Object.keys(urlParameters).forEach(key=>{
    if(urlParameters[key] != ""){
-    check.push('check');
+    check.push(key);
     finalURL += urlParameters[key]+"&";
    }
  });
  // check that all url parameters are there and generate link
- if(check.length == 6){
+ if(checker(check, shouldContain) && check.length >= 4){
   document.getElementById('result').style.display = 'block';
   document.getElementById('finalURL').textContent = finalURL.slice(0,-1);
  }
 }
+
+// helper function - check if two arrays have the same elements
+checker = (array, target) => target.every(value => array.includes(value)); 
