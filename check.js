@@ -65,7 +65,7 @@ function checkRequiredField(elementID, errorContainerID, parameterName){
 }
 
 // re-usable for all optional fields
-function checkOptionalField(elementID, errorContainerID, parameterName){
+function checkOptionalField(elementID, parameterName){
   return function(){
     // target element
     const element = document.getElementById(elementID);
