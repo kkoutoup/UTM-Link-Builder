@@ -116,7 +116,7 @@ function generateLink(){
     finalURL += urlParameters[key]+"&";
    }
  });
- // check that all url parameters are there and generate link
+ // check all url parameters are there and generate link
  if(checker(check, shouldContain) && check.length >= 4){
   document.getElementById('result').style.display = 'block';
   document.getElementById('finalURL').textContent = finalURL.slice(0,-1);
