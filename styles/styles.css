@@ -44,6 +44,12 @@ p {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 570px) {
+  .jumbotron h1 {
+    margin-left: -10px;
+  }
+}
+
 .form-group {
   margin-bottom: 0;
 }

@@ -4,6 +4,11 @@
   @include set_border_radius(0);
   padding: 2rem .5rem;
   margin-bottom: 1rem;
+  h1{
+    @include custom_breakpoint(570){
+      margin-left: -10px;
+    }
+  }
 }
 
 // FORM
