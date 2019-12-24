@@ -15,8 +15,8 @@ let urlParameters = {
 // check inputs for all fields
 urlButton.addEventListener("click", checkRequiredField("source", "sourceError", "Source"), false);
 urlButton.addEventListener("click", checkRequiredField("medium", "mediumError", "Medium"), false);
-urlButton.addEventListener("click", checkOptionalField("term", "termError", "Term"), false);
-urlButton.addEventListener("click", checkOptionalField("content", "contentError", "Content"), false);
+urlButton.addEventListener("click", checkOptionalField("term", "Term"), false);
+urlButton.addEventListener("click", checkOptionalField("content", "Content"), false);
 urlButton.addEventListener("click", checkBaseURL);
 urlButton.addEventListener("click", checkCampaignName);
 // generate utl link
