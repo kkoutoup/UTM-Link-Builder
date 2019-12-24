@@ -1,5 +1,5 @@
 # UTM Link Builder
-A single page app that helps people build UTM links allowing for more effective GA tracking.
+A single page app that helps build UTM links allowing for more effective GA tracking.
 
 ### Category
 Google Analytics/Ad campaigns/Social Media
