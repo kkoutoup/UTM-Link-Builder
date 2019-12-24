@@ -40,13 +40,13 @@ p {
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
-  padding: 2rem 1rem;
+  padding: 2rem .5rem;
   margin-bottom: 1rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 570px) {
   .jumbotron h1 {
-    margin-left: -15px;
+    margin-left: -10px;
   }
 }
 
