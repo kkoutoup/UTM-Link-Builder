@@ -23,7 +23,8 @@ urlButton.addEventListener("click", checkCampaignName);
 urlButton.addEventListener("click", generateLink);
 
 // check base URL
-function checkBaseURL(){
+function checkBaseURL(e){
+  e.preventDefault();
   // target element
   const baseURLContainer= document.getElementById("baseURL");
   // error container
@@ -45,7 +46,8 @@ function checkBaseURL(){
 
 // re-usable for all dropdowns on page
 function checkDropdown(elementID, errorContainerID, parameterName){
-  return function(){
+  return function(e){
+    e.preventDefault();
     // target element
     const element = document.getElementById(elementID);
     // error message container
@@ -65,7 +67,8 @@ function checkDropdown(elementID, errorContainerID, parameterName){
 }
 
 // check campaign name
-function checkCampaignName(){
+function checkCampaignName(e){
+  e.preventDefault();
   // target campaign field and get its value
   const campaignFieldValue = document.getElementById("campaign").value;
   // use regex to check input and inform user of errors, offer examples
@@ -94,7 +97,8 @@ function checkCampaignName(){
 }
 
 // generate link
-function generateLink(){
+function generateLink(e){
+ e.preventDefault();
  let finalURL = '';
  check = [];
  Object.keys(urlParameters).forEach(key=>{
